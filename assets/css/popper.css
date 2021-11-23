@@ -1,0 +1,54 @@
+/*Home Popper */
+#tooltip,#tooltip2,#tooltip3,#tooltip4,#tooltip5,#tooltip6 {
+    background: #333;
+    color: white;
+    font-weight: bold;
+    padding: 4px 8px;
+    font-size: 1.5em;
+    border-radius: 4px;
+    display: none;
+   
+  }
+
+  #tooltip[data-show],#tooltip2[data-show],#tooltip3[data-show],#tooltip4[data-show],#tooltip5[data-show],#tooltip6[data-show] {
+    display: block;
+  }
+
+  #arrow,#arrow2,#arrow3,#arrow4,#arrow5,#arrow6,
+  #arrow::before,#arrow2::before,#arrow3::before,#arrow4::before,#arrow5::before,#arrow6::before {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: inherit;
+  }
+
+  #arrow,#arrow2,#arrow3,#arrow4,#arrow5,#arrow6 {
+    visibility: hidden;
+  }
+
+  #arrow::before,#arrow2::before,#arrow3::before,#arrow4::before,#arrow5::before,#arrow6::before {
+    visibility: visible;
+    content: '';
+    transform: rotate(45deg);
+  }
+
+  #tooltip[data-popper-placement^='top'] > #arrow, #tooltip2[data-popper-placement^='top'] > #arrow2, #tooltip3[data-popper-placement^='top'] > #arrow3
+  , #tooltip4[data-popper-placement^='top'] > #arrow4, #tooltip5[data-popper-placement^='top'] > #arrow5, #tooltip6[data-popper-placement^='top'] > #arrow6 {
+    bottom: -4px;
+  }
+
+  #tooltip[data-popper-placement^='bottom'] > #arrow, #tooltip2[data-popper-placement^='bottom'] > #arrow2, #tooltip3[data-popper-placement^='bottom'] > #arrow3
+  , #tooltip4[data-popper-placement^='bottom'] > #arrow4, #tooltip5[data-popper-placement^='bottom'] > #arrow5, #tooltip6[data-popper-placement^='bottom'] > #arrow6 {
+    top: -4px;
+  }
+
+  #tooltip[data-popper-placement^='left'] > #arrow, #tooltip2[data-popper-placement^='left'] > #arrow2, #tooltip3[data-popper-placement^='left'] > #arrow3
+  , #tooltip4[data-popper-placement^='left'] > #arrow4, #tooltip5[data-popper-placement^='left'] > #arrow5, #tooltip6[data-popper-placement^='left'] > #arrow6{
+    right: -4px;
+  }
+
+  #tooltip[data-popper-placement^='right'] > #arrow, #tooltip2[data-popper-placement^='right'] > #arrow2, #tooltip3[data-popper-placement^='right'] > #arrow3
+  , #tooltip4[data-popper-placement^='right'] > #arrow4, #tooltip5[data-popper-placement^='right'] > #arrow5, #tooltip6[data-popper-placement^='right'] > #arrow6 {
+    left: -4px;
+  }
+
